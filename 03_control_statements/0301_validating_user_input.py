@@ -19,11 +19,11 @@ while student < 10:
     result = int(input('Enter result (1=pass, 2=fail): '))
 
     if result == 1:
-        passes = passes + 1
-        student = student + 1
+        passes += 1
+        student += 1
     elif result == 2:
-        failures = failures + 1
-        student = student + 1
+        failures += 1
+        student += 1
 
 print('Passed:', passes)
 print('Failed:', failures)
