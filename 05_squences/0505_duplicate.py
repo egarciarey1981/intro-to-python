@@ -9,16 +9,10 @@
 ###############################################################################
 
 def removeDuplicates(elements):
-    result = []
+    return [elements[i] for i in range(len(elements)) if elements[i] not in elements[0:(i)]]
 
-    while len(elements) != 0:
-        element = elements[0]
-        result.append(element)
-        elements = [others for others in elements if others != element]
+numbers = [1,2,2,3,3,3,1,2,2,3,3,3,]
+print(numbers)
 
-    return result
-
-list = [1,2,3,3,2,1,2,3,3,2,2,2,1,3]
-
-print(list)
-print(removeDuplicates(list))
+numbers = removeDuplicates(numbers)
+print(numbers)
