@@ -12,18 +12,23 @@
 ###############################################################################
 
 def is_palindrome(word):
+
     word = word.lower()
+    wordClear = ""
+    for index in range(len(word)):
+        if word[index] not in [' ', '.', ',']:
+            wordClear += word[index]
+
     stack = []
+    for index in range(len(wordClear)):
+        stack.append(wordClear[index])
 
-    for index in range(len(word)):
-        stack.append(word[index])
-
-    for index in range(len(word)):
-        if word[index] != stack.pop():
-            return False    
+    for index in range(len(wordClear)):
+        if wordClear[index] != stack.pop():
+            return False
 
     return True
 
 
-word = "Radar"
+word = "Radar."
 print(is_palindrome(word))
