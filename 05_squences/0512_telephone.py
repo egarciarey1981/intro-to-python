@@ -48,6 +48,7 @@ keypads = [
 ]
 
 def wordGenerator(phoneNumber):
+    phoneNumber = str(phoneNumber)
     for a in range(3):
         for b in range(3):
             for c in range(3):
@@ -67,5 +68,5 @@ def wordGenerator(phoneNumber):
                                     end=', ',
                                 )
 
-wordGenerator("2443282")
+wordGenerator(2443282)
 print()
