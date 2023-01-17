@@ -1,5 +1,5 @@
 ###############################################################################
-#                                Exercice 5.5                                 #
+#                                Exercice 5.7                                 #
 ###############################################################################
 #                                                                             #
 # Create a function that receives a list and returns a (possibly shorter)     #
@@ -9,10 +9,10 @@
 ###############################################################################
 
 def removeDuplicates(elements):
-    return [elements[i] for i in range(len(elements)) if elements[i] not in elements[0:(i)]]
+    return [elements[i] for i in range(len(elements)) if elements[i] not in elements[0:i]]
 
-numbers = [1,2,2,3,3,3,1,2,2,3,3,3,]
-print(numbers)
+numbers = [1,2,2,3,3,3,1,2,2,3,3,3]
+uniques = removeDuplicates(numbers)
 
-numbers = removeDuplicates(numbers)
 print(numbers)
+print(uniques)
