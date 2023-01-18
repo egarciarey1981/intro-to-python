@@ -12,7 +12,7 @@ with the numbers right aligned in each column.
        3       9      27
        4      16      64
        5      25     125
-'''                                                                            
+'''
 
 spaces = 6
 
